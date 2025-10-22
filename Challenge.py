@@ -19,3 +19,11 @@ else:
 print("--------LOGIN PAGE-------")
 login_username = input("Enter your username: ")
 login_password = input("Enter your password: ")
+if login_username == username and login_password == password:
+    print(f"CONGRATULATION....... {username}!!!. You have sucessfully logged in.")
+elif login_username != username:
+    print("Username not found!")
+elif login_password != password:
+    print("Incorrect password!")
+else:
+    print("Username not found and password incorrect")
