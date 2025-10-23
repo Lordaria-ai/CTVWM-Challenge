@@ -5,7 +5,7 @@ while True:
     username = input("Choose a username: ").title()
     password = input("Enter a password: ")
     if len(password) < 7:
-        print("Password must be seven(7) charaters long!")
+        print("Password must be at least seven(7) charaters long!")
         account_creation = False
     else:
         confirm_password = input("Confirm your password: ")
@@ -38,9 +38,11 @@ if account_creation:
 balance = 100,000
 attempts = 3
 while True:
-    create_pin = input("Create a 4-digit PIN: ")
-    print("PIN created successfully!\n")
+    create_pin = input("\n\nCreate a 4-digit PIN: ")
+    
     if len(create_pin) < 4 or len(create_pin) > 4:
         print("PIN must be 4-digits long. TRY AGAIN!!!")
         pin_creation = False
-    
+    else:
+        print("PIN created successfully!\n")
+        break
