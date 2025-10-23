@@ -2,7 +2,7 @@ print("---------WELCOME TO LORDISH BANKING SYSTEM----------")
 account_creation= True
 while True:
     print("---------ACCOUNT CREATION---------")
-    username = input("Choose a username: ")
+    username = input("Choose a username: ").title()
     password = input("Enter a password: ")
     if len(password) < 7:
         print("Password must be seven(7) charaters long!")
@@ -21,7 +21,7 @@ while True:
 if account_creation:
     while True:
         print("\n\n\n--------LOGIN PAGE-------")
-        login_username = input("Enter your username: ")
+        login_username = input("Enter your username: ").title()
         login_password = input("Enter your password: ")
         if login_username == username and login_password == password:
             print(f"CONGRATULATION....... {username}!!!. You have sucessfully logged in.")
@@ -33,4 +33,14 @@ if account_creation:
             print("Incorrect password!")
         else:
             print("Username not found and password incorrect.")
-        
+
+
+balance = 100,000
+attempts = 3
+while True:
+    create_pin = input("Create a 4-digit PIN: ")
+    print("PIN created successfully!\n")
+    if len(create_pin) < 4 or len(create_pin) > 4:
+        print("PIN must be 4-digits long. TRY AGAIN!!!")
+        pin_creation = False
+    
