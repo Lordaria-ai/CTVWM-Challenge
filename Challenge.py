@@ -32,5 +32,5 @@ if account_creation:
         elif login_password != password:
             print("Incorrect password!")
         else:
-            print("Username not found and password incorrect")
+            print("Username not found and password incorrect.")
         
