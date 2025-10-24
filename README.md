@@ -8,4 +8,4 @@ I only realized the problems when I run the code to see how it works and if it i
 He told me he can't tell me some things because this was a completion or a challenge so I had to figure some of the things out on my own. I understood him so I did a little research and that hepled me. I was very happy that could figure it out on my own abdwith a little help.
 Guess now I have to think of what to do next.
 Decided to add a pin verfication code for the transaction part of my banking system.
-Also made the pin confirmation a limited attempts.
+Also made the pin confirmation a limited attempts
