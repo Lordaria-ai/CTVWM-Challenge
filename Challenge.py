@@ -4,8 +4,8 @@ while True:
     print("---------ACCOUNT CREATION---------")
     username = input("Choose a username: ").title()
     password = input("Enter a password: ")
-    if len(password) < 7:
-        print("Password must be at least seven(7) charaters long!")
+    if len(password) < 5:
+        print("Password must be at least 5 charaters long!")
         account_creation = False
     else:
         confirm_password = input("Confirm your password: ")
@@ -20,7 +20,7 @@ while True:
     #LOGIN PAGE
 if account_creation:
     while True:
-        print("\n\n\--------LOGIN PAGE-------")
+        print("\n\n--------LOGIN PAGE-------")
         login_username = input("Enter your username: ").title()
         login_password = input("Enter your password: ")
         if login_username == username and login_password == password:
@@ -37,8 +37,9 @@ else:
         print("Account not logged in successfully.")        
 
 
-balance = 100,000
+balance = float(100000)
 attempts = 3
+
 while True:
     print("\n\n=====PIN CREATION======")
     #For more security
@@ -65,3 +66,28 @@ else:
     exit() # Ends program when the pin is entered wrongly 3 times.
 
 #BANKING MENU
+print("Select an option to proceed:")
+print("A. Check Balance")
+print("B. Deposit Money")
+print("C. Withdraw Money")
+print("D. Loggout")
+while True:
+    choice = input("Enter your choice: ").title()
+    if choice == "A":
+        print(f"Your account balance is: ${balance}.")
+    elif choice == "B":
+        amount = float(input("Enter amount to deposit into your account: "))
+        balance += amount
+        print(f"${amount} deposited succesfully. New balance: ${balance}")
+    elif choice == "C":
+        amount = float(input("Enter amount your want to withdraw: "))
+        if amount > balance:
+            print("Insufficient balance.")
+        else:
+            balance -= amount
+            print(f"${amount} withdrawn successfully. New balance: ${balance}")
+    elif choice == "D":
+        print("Thank you for banking with Lordish Bank! ")
+        break
+    else:
+        print("Invalid option. Please try again.")
