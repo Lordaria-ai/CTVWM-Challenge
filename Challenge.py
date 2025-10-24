@@ -1,9 +1,15 @@
+# Welcome message
 print("---------WELCOME TO LORDISH BANKING SYSTEM----------")
+
+# -------------------- ACCOUNT CREATION --------------------
+
 account_creation= True
 while True:
-    print("---------ACCOUNT CREATION---------")
+    print("------------ACCOUNT CREATION-----------")
     username = input("Choose a username: ").title()
     password = input("Enter a password: ")
+
+    # Password validation
     if len(password) < 5:
         print("Password must be at least 5 charaters long!")
         account_creation = False
@@ -17,7 +23,7 @@ while True:
             account_creation = True
             break
 
-    #LOGIN PAGE
+    # -------------------- LOGIN SECTION --------------------
 if account_creation:
     while True:
         print("\n\n--------LOGIN PAGE-------")
@@ -37,26 +43,28 @@ else:
         print("Account not logged in successfully.")        
 
 
-balance = float(100000)
-attempts = 3
+balance = float(100000) #Default account balance
+attempts = 3 #PIN login attempts
+
+# -------------------- PIN CREATION --------------------
 
 while True:
     print("\n\n=====PIN CREATION======")
     #For more security
     create_pin = input("\n\nCreate a 4-digit PIN: ")
     
-    if len(create_pin) < 4 or len(create_pin) > 4:
+    if len(create_pin) != 4 or not create_pin.isdigit():
         print("PIN must be exactly 4-digits long. TRY AGAIN!!!")
         pin_creation = False
     else:
         print("PIN created successfully!\n")
         break
-
+# -------------------- PIN LOGIN --------------------
 # Ask user to log in with pin with 3 attempts.
 while attempts > 0:
     pin = input("Enter your PIN to log in: ")
     if pin == create_pin:
-        print("PIN accepted!!\n")
+        print("PIN accepted!! Access granted\n")
         break
     else:
         attempts -= 1
@@ -65,14 +73,15 @@ else:
     print("Too many incorrect attempts.Your account has been locked. ")
     exit() # Ends program when the pin is entered wrongly 3 times.
 
-#BANKING MENU
-print("Select an option to proceed:")
-print("A. Check Balance")
-print("B. Deposit Money")
-print("C. Withdraw Money")
-print("D. Loggout")
+# -------------------- BANKING MENU --------------------
 while True:
-    choice = input("Enter your choice: ").title()
+    print("Select an option to proceed:")
+    print("A. Check Balance")
+    print("B. Deposit Money")
+    print("C. Withdraw Money")
+    print("D. Loggout")
+
+    choice = input("\nEnter your choice: ").title()
     if choice == "A":
         print(f"Your account balance is: ${balance}.")
     elif choice == "B":
@@ -87,7 +96,16 @@ while True:
             balance -= amount
             print(f"${amount} withdrawn successfully. New balance: ${balance}")
     elif choice == "D":
-        print(f"Thank you..... {username} for banking with Lordish Bank! ")
-        break
+        confirm = input("Are you sure you want to logout? (yes/no): ").lower()
+        if confirm == "yes":
+            print("\n======== SESSION SUMMARY ========")
+            print(f"Account Holder: {username}")
+            print(f"Final Balance: ${balance}")
+            print("Transaction session ended successfully.")
+            print("Thank you for using Lordish Bank! HAVE A NICE DAY!!\n")
+            exit()
+        else:
+            print("Returning to main menu...")
     else:
-        print("Invalid option. Please try again.")
+        print("Invalid choice. Please try again.")
+       
