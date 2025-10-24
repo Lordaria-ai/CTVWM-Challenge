@@ -45,5 +45,3 @@ This project is built using **loops**, **conditional statements**, and **user in
 
 ---
 
-
-   python lordish_banking_system.py
