@@ -10,4 +10,29 @@ This project is built using **loops**, **conditional statements**, and **user in
 
 ---
 
+## ✨ Features
+
+✅ **Account Creation**  
+• Users can register with a username and password.  
+• Password must be at least **5 characters long** and confirmed before proceeding.  
+
+🔐 **Login System**  
+• Secure login using the registered username and password.  
+
+🔢 **PIN Setup and Verification**  
+• Users create a **4-digit PIN** for extra security.  
+• Program allows **3 attempts** before locking the account.  
+
+💰 **Banking Menu Options**  
+| Option | Description |
+|:------:|:------------|
+| A | Check Balance |
+| B | Deposit Money |
+| C | Withdraw Money |
+| D | Logout |
+
+⚠️ **Error Handling**  
+• Handles short passwords, invalid PINs, and insufficient balance.  
+
+---
 
