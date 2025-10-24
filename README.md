@@ -36,3 +36,14 @@ This project is built using **loops**, **conditional statements**, and **user in
 
 ---
 
+## 🧩 Concepts Used
+
+- **Loops (`while`)** — For repeated attempts and navigation.  
+- **Conditional Statements (`if`, `elif`, `else`)** — For decision making.  
+- **Variables** — To store account details and balance.  
+- **Input & Output** — For interactive communication with the user.  
+
+---
+
+
+   python lordish_banking_system.py
