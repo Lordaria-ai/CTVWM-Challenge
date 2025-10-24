@@ -45,3 +45,12 @@ This project is built using **loops**, **conditional statements**, and **user in
 
 ---
 
+## 💻 How to Run
+
+1. Ensure **Python 3** is installed on your computer.  
+2. Copy the program into a file named `lordish_banking_system.py`.  
+3. Open your terminal or command prompt.  
+4. Navigate to the folder where the file is saved.  
+5. Run the code:
+   ```bash
+   python lordish_banking_system.py
