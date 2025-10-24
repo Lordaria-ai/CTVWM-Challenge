@@ -87,7 +87,7 @@ while True:
             balance -= amount
             print(f"${amount} withdrawn successfully. New balance: ${balance}")
     elif choice == "D":
-        print("Thank you for banking with Lordish Bank! ")
+        print(f"Thank you..... {username} for banking with Lordish Bank! ")
         break
     else:
         print("Invalid option. Please try again.")
